@@ -1,0 +1,30 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "1.17.19"
+}
+
+group = 'com.wandou'
+version = '0.1.0'
+
+base {
+    archivesName = 'BetterArmorTrim'
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:0.16.14"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.116.17+1.21.1"
+}
+
+processResources {
+    filesMatching('fabric.mod.json') {
+        expand "version": version
+    }
+}
+
+java {
+    withSourcesJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
