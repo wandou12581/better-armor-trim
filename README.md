@@ -28,12 +28,11 @@ $$
 
 $$
 B(S) = \begin{cases}
-S & 0 \le S \le 4 \\[4pt]
-4 + \tfrac{3}{4}\,(S - 4) & 4 < S \le 8 \\[4pt]
-7 + \tfrac{3}{8}\,(S - 8) & 8 < S \le 16
+S & 0 \le S \le 4 \\
+4 + \frac{3}{4}(S - 4) & 4 < S \le 8 \\
+7 + \frac{3}{8}(S - 8) & 8 < S \le 16
 \end{cases}
-\qquad
-B = \lfloor B(S) \rfloor
+\qquad B = \lfloor B(S) \rfloor
 $$
 
 其中 `L1..L4` 是四件盔甲各自的材质档，空槽或没有该纹饰记 0。
